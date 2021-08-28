@@ -28,6 +28,8 @@ public class ShovelController : MonoBehaviour
     }
 
     private void Update() {
+        if(!(Global.Seeding && Global.TargetSeed == null)) return;
+        
         if(Input.GetMouseButtonUp(0)){
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             foreach(RaycastHit2D hit in Physics2D.RaycastAll(pos,Vector2.zero)){
