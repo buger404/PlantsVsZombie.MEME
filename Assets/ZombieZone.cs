@@ -32,7 +32,11 @@ public class ZombieZone : MonoBehaviour
 
         CDGained += Time.deltaTime;
         if(AttackWaves[waveId].spanTime - CDGained <= 5f && AttackWaves[waveId].IsHugeWave && !AttackWaves[waveId].Informed){
-            WaveAnimator.Play("Wave",0,0.0f);
+            if(waveId == AttackWaves.Count - 1){
+                WaveAnimator.Play("FinalWave",0,0.0f);
+            }else{
+                WaveAnimator.Play("Wave",0,0.0f);
+            }
             ZombieWave wave = AttackWaves[waveId];
             wave.Informed = true;
             AttackWaves[waveId] = wave;

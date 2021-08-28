@@ -136,7 +136,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8f3017127a1c8654f909833ee6414066, type: 3}
   eatup: {fileID: 8300000, guid: 8d66710c63506e640add6c3a97dd7822, type: 3}
   hp: 0
-  Speed: 0.03
+  Speed: 0.003
 --- !u!82 &3857660405795112077
 AudioSource:
   m_ObjectHideFlags: 0

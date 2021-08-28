@@ -66,12 +66,15 @@ public class SeedPackageController : MonoBehaviour
                                 plant.HP = 10; plant.BuffCD = 2.0f; 
                             }
                             if(this.Plant == "wey"){
-                                SunNeeded *= 2;
                                 plant.HP = 10; plant.BuffCD = 0.1f; 
                             }
                             Plant.SetActive(true);
                             Global.Sun -= SunNeeded;
                             CDGain = 0;
+                            if(this.Plant == "wey"){
+                                SunNeeded *= 2;
+                                transform.Find("SunNeeded").GetComponent<Text>().text = SunNeeded.ToString();
+                            }
                         }
                         break;
                     }
