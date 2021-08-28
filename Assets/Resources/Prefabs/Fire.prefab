@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 7718d1df10a8f6243be5c446e8758f6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +97,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hurt: 2
-  sndHit: {fileID: 8300000, guid: 92d83a2ed51638c4e9b93da90a1fd0d0, type: 3}
+  xSpeed: 0.1
+  ySpeed: 0
+  IsTrigger: 0
+  Hurted: []
+  sndHit: {fileID: 8300000, guid: 504bc1a98eada7946b8ef39ec06bacdf, type: 3}
   routine: 0
 --- !u!61 &5110455183978847344
 BoxCollider2D:

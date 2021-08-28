@@ -29,6 +29,7 @@ public class SeedPackageController : MonoBehaviour
         }
         Avaliable = Global.Sun >= SunNeeded && CDGain >= CD && !Global.Seeding;
         BanPanel.SetActive(!Avaliable);
+        if(Input.GetKey(KeyCode.Z)) CDGain = CD;
         if(Global.TargetSeed == this && Global.Seeding){
             if(Input.GetMouseButtonUp(0)){
                 Vector3 mpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -48,10 +49,21 @@ public class SeedPackageController : MonoBehaviour
                             Plant.GetComponent<SpriteRenderer>().sprite = Face.sprite;
                             PlantController plant = Plant.GetComponent<PlantController>();
                             plant.plantName = this.Plant;
+                            plant.plantID = i;
                             if(this.Plant == "404"){
-                                plant.HP = 10; plant.BuffCD = 1.0f; 
+                                plant.HP = 10; plant.BuffCD = 2.0f; 
+                            }
+                            if(this.Plant == "vantong"){
+                                plant.HP = 10; plant.BuffCD = 1.6f; 
+                            }
+                            if(this.Plant == "icelolly"){
+                                plant.HP = 10; plant.BuffCD = 15.0f; 
+                            }
+                            if(this.Plant == "nanshenger"){
+                                plant.HP = 10; plant.BuffCD = 2.0f; 
                             }
                             Plant.SetActive(true);
+                            Global.Sun -= SunNeeded;
                             CDGain = 0;
                         }
                         break;
@@ -69,7 +81,7 @@ public class SeedPackageController : MonoBehaviour
             Global.DragSeed.SetActive(true);
             sndPlayer.clip = pointSnd;
             sndPlayer.Play();
-        }else if(Global.TargetSeed == this){
+        }else if(Global.TargetSeed == this && Global.Seeding){
             Global.Seeding = false;
             sndPlayer.clip = pointSnd;
             sndPlayer.Play();

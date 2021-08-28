@@ -1806,11 +1806,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sndPlayer: {fileID: 519420033}
   FirstWave: {fileID: 8300000, guid: b1b9edb40e70d2b4483d45b1ac04400d, type: 3}
+  groans:
+  - {fileID: 8300000, guid: fc9560f0f0066cb46a879350138c187a, type: 3}
+  - {fileID: 8300000, guid: fa27b79ec698a094ba0d373f00b1e5c1, type: 3}
+  - {fileID: 8300000, guid: 2bd79c57accd4e8449f2c61a5e5efe9d, type: 3}
+  - {fileID: 8300000, guid: 39beb5bca05b67049b690bfc5d3e1c85, type: 3}
+  - {fileID: 8300000, guid: e98a75e553dd0f8499306222728a3484, type: 3}
+  - {fileID: 8300000, guid: 0e699cd7ad7311246818818303f90206, type: 3}
   AttackWaves:
   - IsHugeWave: 0
     Zombies:
-    - {fileID: 5452710849676450733, guid: f161045155c480640b02de3c8cb901c3, type: 3}
-    spanTime: 30
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    - {fileID: 7308252416877706394, guid: e0b8258a9376eba42be9278da144cd1c, type: 3}
+    spanTime: 5
   - IsHugeWave: 0
     Zombies:
     - {fileID: 5452710849676450733, guid: f161045155c480640b02de3c8cb901c3, type: 3}
@@ -3006,7 +3022,7 @@ GameObject:
   - component: {fileID: 1257242752}
   - component: {fileID: 1257242751}
   m_Layer: 0
-  m_Name: background1
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3346,7 +3362,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
