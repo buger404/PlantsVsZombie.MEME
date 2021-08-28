@@ -32,6 +32,7 @@ public class ZombieController : MonoBehaviour
                 Global.PlaySnd(hurt[Random.Range(0,hurt.Count)]);
                 hp -= fire.Hurt;
                 if(hp <= 0){
+                    Global.ZombieCount--;
                     if(fire.Hurt >= 10){
                         animator.Play("BoomDie");
                     }else{
@@ -41,7 +42,7 @@ public class ZombieController : MonoBehaviour
                 }else{
                     animator.Play("ZombieHurt", 1, 0.0f);
                 }
-                fire.Hurted.Add(this.gameObject);
+                fire.Crash(this.gameObject);
                 if(!fire.IsTrigger) Destroy(other.gameObject);
             }
         }
@@ -74,9 +75,11 @@ public class ZombieController : MonoBehaviour
             }
             return;
         }
-        // 给我爬
         transform.localPosition = new Vector3(transform.localPosition.x - Speed,transform.localPosition.y,1);
-        // 给我嘤嘤叫
+        if(transform.localPosition.x < -6.2f){
+            Global.Zone.bgm.gameObject.SetActive(false);
+            Global.GameOver.SetActive(true);
+        }
         if(Random.Range(0,1000) == 66){
             Global.PlaySnd(groans[Random.Range(0,groans.Count)]);
         }

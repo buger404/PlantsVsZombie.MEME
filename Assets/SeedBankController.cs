@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Global{
-    public static long Sun = 5000;
+    public static long Sun = 50;
     public static bool Seeding = false;
+    public static long ZombieCount = 0;
+    public static ZombieZone Zone;
     public static SeedPackageController TargetSeed;
-    public static GameObject DragSeed;
+    public static GameObject DragSeed,GameOver;
     public static GameObject PlantPrefab,SndPrefab;
     public static List<Vector3> SeedPoints;
     public static List<bool> SeedPlanted;

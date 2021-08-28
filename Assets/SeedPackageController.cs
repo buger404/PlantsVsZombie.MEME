@@ -62,6 +62,13 @@ public class SeedPackageController : MonoBehaviour
                             if(this.Plant == "nanshenger"){
                                 plant.HP = 10; plant.BuffCD = 2.0f; 
                             }
+                            if(this.Plant == "intallk"){
+                                plant.HP = 10; plant.BuffCD = 2.0f; 
+                            }
+                            if(this.Plant == "wey"){
+                                SunNeeded *= 2;
+                                plant.HP = 10; plant.BuffCD = 0.1f; 
+                            }
                             Plant.SetActive(true);
                             Global.Sun -= SunNeeded;
                             CDGain = 0;
